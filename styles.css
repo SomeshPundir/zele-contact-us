@@ -29,46 +29,97 @@ nav {
 }
 li a{
     color: white;
-    text-decoration: none;
-}
+list-style: none;}
 
+ul li{
+    list-style: none;
+}
 .links ul {
     list-style-type: none; /* Remove bullets from the list */
     margin: 10px;
 }
 
 .links ul li {
-    text-decoration: none;
     display: inline-block; /* Display list items horizontally */
     margin-left: 20px; /* Adjust spacing between list items */
     color: white; /* Text color for the links */
 }
 
-#mobile-menu {
-    list-style-type: none; /* Remove bullets from the list */
-    padding: 0;
-    margin: 0;
-}
 
 .links ul li:hover {
-    text-decoration: none;
     background-color:#815dff;
 }
 
-.mobilemenuMid ul li:hover {
-    text-decoration: none;
 
-    background-color:#815dff; 
-}
-
-#mobile-menu li {
-    padding: 15px 0;
-    margin: 0;
-    color: white;
-    list-style-type: none;
+#hamburger-icon{
+    /* background-color: #6f1fd4; */
+    order: 1;
+    /* margin:auto 0; */
+    margin-left: 0px;
     display: none;
-    text-align: center; /* Center the text */
+    cursor:pointer;
 }
+.xxcontainer{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+
+}
+.yycontainer{
+    display: block;
+}
+.zlogo{
+    order: 2;
+    position: absolute;
+text-align:center;
+flex-grow: 1;
+    display: block;
+}
+
+
+#hamburger-icon div{
+    background-color: #6f1fd4;
+    width:35px;
+    height: 3px;
+    background-color:white;
+    margin:6px 0;
+    transition:0.4s;
+}
+.open .bar1{
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform :rotate(-45deg) translate(-6px , 6px);
+
+}
+
+.open .bar2{
+    opacity: 0;
+}
+.open .bar3{
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+
+}
+
+.open .mobile-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+
+}
+
+.mobile-menu{
+    background-color: #6f1fd4;
+    display: none;
+    position:absolute;
+    top :40px;
+     left:0px;
+    height: calc(100vh -50px);
+    width: 100%;
+
+
+}
+
 
 @media only screen and (max-width: 600px) {
     .logo {
@@ -77,20 +128,14 @@ li a{
     .links ul {
         display: none; /* Hide the desktop menu */
     }
-    #mobile-menu li {
-        text-decoration: none !important;
-        display: block; /* Show the mobile menu */
-        margin-left: 0; /* Reset the left margin */
-        margin-right: 0; /* Reset the right margin */
-    }
-    .mobilemenuMid{
-        position: relative;
-        left: -30%;
-    }
-    .mobilemenuMid ul li {
-        text-decoration: none !important;
-    }
-} 
+
+ #hamburger-icon{
+    display: block;
+
+ }
+
+
+}
 
 
 
@@ -108,7 +153,7 @@ header h1 {
     font-size: 20px;
     color: #5b18b2;
     border-radius: 5px;
-    background-color: #fcfcfc;   
+    background-color: #fcfcfc;
      padding: 10px;
     margin:10px;
     border: solid 1px #ddddde
@@ -192,7 +237,7 @@ a{
     border: solid 1px #5bddb4;
     font-size: 1rem;
     font-weight: 900;
-    border-radius: 5px; 
+    border-radius: 5px;
 
 }
 
@@ -233,7 +278,7 @@ footer{
     /* height: 500px; */
     width: 100%;
     margin-top: 10px;
-    
+
 }
 footer p{
     margin: 20px;
@@ -260,24 +305,29 @@ footer p{
 .footerMain .anchorstag a:hover {
     color: #815dff; /* Change color on hover */
   }
-  
+
   /* Apply hover effect to social media icons */
   .footerMain .socialmedia a:hover {
     color: #815dff; /* Change color on hover */
   }
 
 
+.zlogo img{
+    display: block;
+height: 20px;
+width: 20px;
+}
 
   .socialmedia {
     display: flex;
     justify-content: center; /* Align items horizontally in the center */
     flex-wrap: wrap; /* Allow items to wrap to the next line */
   }
-  
+
   .socialmedia a {
     padding: 10px; /* Add padding to the links */
   }
-  
+
   .socialmedia a i {
     font-size: 30px;
   }
@@ -286,12 +336,12 @@ footer p{
     flex-wrap: wrap; /* Allow items to wrap to the next line */
     justify-content: center; /* Align items horizontally in the center */
   }
-  
+
   .anchorstag a {
     padding: 0 10px; /* Add padding to the links */
   }
-  
-  
+
+
   /* Adjustments for smaller viewports */
   @media only screen and (max-width: 600px) {
     .anchorstag a {
@@ -300,7 +350,7 @@ footer p{
     .footerMain {
       flex-direction: column; /* Align items vertically on smaller viewports */
     }
-  
+
     .socialmedia {
       margin-top: 10px; /* Add margin to separate from the anchor tags */
     }
@@ -322,8 +372,9 @@ footer p{
 
 
 h1{
-    font-family: 'ZelleSans-UltLt';
-    font-weight: normal;
+    padding-top: 1vw;
+    font-family: 'Cabin';
+    font-weight: bold;
     line-height: 1.2em;
 }
 
@@ -335,7 +386,7 @@ h1{
     margin: 0;
 
   }
-  
+
   .horizontal-list li {
     display: inline-block; /* Display list items horizontally */
     margin-right: 10px; /* Adjust spacing between list items */
@@ -353,7 +404,7 @@ h1{
 
 
   .mainList.active {
-    border-top:5px solid #6d1ed4; 
+    border-top:5px solid #6d1ed4;
     border-radius: 10px 10px 0 0; /* Set border radius for top left and right corners */
 
     border-radius: 5px;
@@ -361,5 +412,5 @@ h1{
   }
 
 
-  
+
 
