@@ -201,3 +201,61 @@ nav {
 }
 
    
+
+
+   /* 
+nav {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Distribute items horizontally */
+    background-color: #6d1ed4; /* Background color for the navbar */
+}
+
+.logo img {
+    height: 40px; /* Adjust height as needed */
+}
+li a{
+    color: white;
+    text-decoration: none;
+}
+
+.links ul {
+    list-style-type: none; /* Remove bullets from the list */
+    margin: 10px;
+}
+
+.links ul li {
+    display: inline-block; /* Display list items horizontally */
+    margin-left: 20px; /* Adjust spacing between list items */
+    color: white; /* Text color for the links */
+}
+
+#mobile-menu {
+    list-style-type: none; /* Remove bullets from the list */
+    padding: 0;
+    margin: 0;
+}
+
+#mobile-menu li {
+    padding: 15px 0;
+    margin: 0;
+    color: white;
+    list-style-type: none;
+    display: none;
+    text-align: center; /* Center the text */
+}
+
+@media only screen and (max-width: 600px) {
+    .logo {
+        display: none; /* Hide the logo on mobile */
+    }
+    .links ul {
+        display: none; /* Hide the desktop menu */
+    }
+    #mobile-menu li {
+        display: block; /* Show the mobile menu */
+        margin-left: 0; /* Reset the left margin */
+        margin-right: 0; /* Reset the right margin */
+    }
+} */
+

@@ -23,6 +23,7 @@ nav {
     background-color: #6d1ed4; /* Background color for the navbar */
 }
 
+
 .logo img {
     height: 40px; /* Adjust height as needed */
 }
@@ -37,6 +38,7 @@ li a{
 }
 
 .links ul li {
+    text-decoration: none;
     display: inline-block; /* Display list items horizontally */
     margin-left: 20px; /* Adjust spacing between list items */
     color: white; /* Text color for the links */
@@ -46,6 +48,17 @@ li a{
     list-style-type: none; /* Remove bullets from the list */
     padding: 0;
     margin: 0;
+}
+
+.links ul li:hover {
+    text-decoration: none;
+    background-color:#815dff;
+}
+
+.mobilemenuMid ul li:hover {
+    text-decoration: none;
+
+    background-color:#815dff; 
 }
 
 #mobile-menu li {
@@ -65,11 +78,20 @@ li a{
         display: none; /* Hide the desktop menu */
     }
     #mobile-menu li {
+        text-decoration: none !important;
         display: block; /* Show the mobile menu */
         margin-left: 0; /* Reset the left margin */
         margin-right: 0; /* Reset the right margin */
     }
-}
+    .mobilemenuMid{
+        position: relative;
+        left: -30%;
+    }
+    .mobilemenuMid ul li {
+        text-decoration: none !important;
+    }
+} 
+
 
 
 header h1 {
@@ -148,57 +170,7 @@ a{
 
 .descriptionclass textarea{
     height: 10vw;
-    width: 81vw;
-}
-.form {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-label{
-    color: #6c757d;
-    font-size: 1.5em;
-}
-.form-row {
-    display: flex;
-    flex: 1 1 50%; /* 2 inputs at the same row */
-    margin-bottom: 10px;
-}
-
-.input-group {
-    flex: 1; /* Each input group takes equal width */
-    padding-right: 10px; /* Add space between input groups */
-}
-
-
-input[type="text"],
-textarea {
-    width: 40vw;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-bottom: 5px;
-}
-
-input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    border-color: rgb(221, 221, 222);
-}
-
-input[type="submit"]:hover {
-    background-color: #45a049;
-}
-
-@media screen and (max-width: 600px) {
-    .form-row {
-        flex: 1 1 100%; /* 1 input in 1 line on small screens */
-    }
+    width: 100%;
 }
 
 
@@ -258,7 +230,7 @@ input[type="submit"]:hover {
 
 footer{
     background-color: #5b18b2;
-    height: 500px;
+    /* height: 500px; */
     width: 100%;
     margin-top: 10px;
     
